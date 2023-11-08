@@ -18,10 +18,12 @@ class KategorijaSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 10) as $index) {
-            Kategorija::create([
-                'naziv' => $faker->naziv,
-                'korisnik_dodao' => $faker->korisnikdodao,
-                'vrijeme_dodavanja' => $faker-> dateTimeThisMonth,
+            kategorija::create([
+        
+
+                'naziv' => $faker->name,
+                'korisnik_dodao' => $faker->userName,
+                'vrijeme_dodavanja' => $faker->dateTimeThisMonth
                 
             ]);
         }

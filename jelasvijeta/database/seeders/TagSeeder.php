@@ -18,11 +18,13 @@ class TagSeeder extends Seeder
         $faker = Faker::create();
 
         for ($i = 0; $i < 10; $i++) {
-            Sastojci::create([
-                'naziv' => $faker->naziv,
-                'korisnik_dodao' => $faker->korisnikdodao,
+            tag::create([
+                
+
+                'naziv' => $faker->name,
+                'korisnik_dodao' => $faker->userName,
                 'vrijeme_dodavanja' => $faker->dateTimeThisMonth,
-                'jezik' =>  $faker->jezik,
+                'jezik' => $faker->languageCode
                 
             ]);
         
